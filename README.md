@@ -1,16 +1,62 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple weather application that allows users to search for the current weather and forecast for a specific location.
 
-Currently, two official plugins are available:
+## About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was built to demonstrate how to create a modern web application using React and other popular libraries. It serves as a good starting point for anyone looking to build a simple, yet functional, weather app. The application allows users to search for a city and view the current weather conditions, as well as a 5-day forecast.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   Search for the current weather of any city.
+*   View the current temperature, humidity, and wind speed.
+*   See a 5-day weather forecast.
+*   Responsive design that works on all devices.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+*   [Vite](https://vitejs.dev/) - A fast build tool and development server for modern web projects.
+*   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+*   [Axios](https://axios-http.com/) - A promise-based HTTP client for the browser and Node.js.
+*   [React Icons](https://react-icons.github.io/react-icons/) - A library of popular icon packs for React.
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+*   npm
+    ```sh
+    npm install npm@latest -g
+    ```
+
+### Installation
+
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your_username_/new_weather.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server, run the following command:
+
+```sh
+npm run dev
+```
+
+This application open at `http://localhost:5173/`.
+
+
+## Available Scripts
+
+In the project directory, you can run:
+
+*   `npm run dev`: Runs the app in the development mode.
+*   `npm run build`: Builds the app for production to the `dist` folder.
