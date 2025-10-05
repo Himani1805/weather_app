@@ -44,12 +44,10 @@ export default function Forecast({ city }) {
                 <div className="text-center text-red-500">{error}</div>
             )}
             {forecastData.length > 0 && (
-                <div className=" flex flex-wrap md:flex-nowrap
-            justify-center md:justify-between
+                <div className="flex flex-wrap md:flex-nowrap justify-center md:justify-between
             gap-4 overflow-x-auto pb-4">
                     {forecastData.map((entry, index) => (
-                        <div key={index} className="flex-shrink-0 w-36 sm:w-40 md:w-44 lg:w-48 bg-gray-100 rounded-lg p-4 text-center shadow-md hover:shadow-xl hover:bg-gray-50
-                transition-all duration-300 ease-in-out">
+                        <div key={index} className="flex-shrink-0 w-36 sm:w-40 md:w-44 lg:w-48  bg-gray-100 rounded-xl p-4 text-center shadow-md   hover:shadow-xl hover:bg-gray-50 transition-all duration-300 ease-in-out">
                             <div className="text-lg font-semibold text-gray-700">{new Date(entry.dt_txt).toLocaleDateString([], { weekday: 'long' })}</div>
                             <img
                                 src={`http://openweathermap.org/img/wn/${entry.weather[0].icon}.png`}
