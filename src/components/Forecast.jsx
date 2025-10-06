@@ -23,7 +23,7 @@ export default function Forecast({ city }) {
                 );
                 setForecastData(dailyData.slice(0, 5));
             } catch (err) {
-                setError('City not found or API error');
+                setError('City Not Found...');
             } finally {
                 setLoading(false);
             }

@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
     WiHumidity,
     WiStrongWind,
@@ -9,37 +8,8 @@ import {
     WiThermometer,
 } from 'react-icons/wi';
 
-// API setup
-const API_URL = 'https://api.openweathermap.org/data/2.5';
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-
 // Main component
-export default function WeatherDisplay({ city }) {
-    const [weather, setWeather] = useState(null); 
-    const [loading, setLoading] = useState(true); 
-    const [error, setError] = useState(null); 
-    
-
-    // Fetch weather data when city changes
-    useEffect(() => {
-        async function fetchWeather() {
-            setLoading(true);
-            setError(null);
-            try {
-                const url = `${API_URL}/weather?q=${city}&appid=${API_KEY}&units=metric`;
-                const response = await axios.get(url);
-                setWeather(response.data);
-            } catch (err) {
-                setError('City not found or API error');
-            } finally {
-                setLoading(false);
-            }
-        }
-
-        if (city) {
-            fetchWeather();
-        }
-    }, [city]);
+export default function WeatherDisplay({ weather }) {
 
     // Convert UNIX timestamp to readable time
     function formatTime(timestamp) {
@@ -64,20 +34,6 @@ export default function WeatherDisplay({ city }) {
 
     return (
         <div className="w-full max-w-7xl mx-auto p-6 bg-gradient-to-br from-blue-100 to-white rounded-2xl shadow-xl">
-            {/* Loading message */}
-            {loading && (
-                <div className="animate-pulse text-center text-gray-500 text-xl">
-                    Loading weather...
-                </div>
-            )}
-
-            {/* Error message */}
-            {error && (
-                <div className="text-center text-red-600 font-semibold text-lg">
-                    {error}
-                </div>
-            )}
-
             {/* Weather display */}
             {weather && (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
